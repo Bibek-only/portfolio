@@ -1,0 +1,71 @@
+base colors
+oklch(91.637% 0.034 90.515)
+oklch(88.272% 0.049 91.774)
+oklch(84.133% 0.065 90.856)
+oklch(41% 0.112 45.904) -> amber-900
+
+primary
+oklch(80% 0.114 19.571)
+red-900 (text)
+
+secondary
+green-200
+green-800 (text)
+
+accent
+yellow-600
+amber-900 (text)
+
+nutral
+stone-600
+stone-300 (text)
+
+info
+sky-600
+amber-100 (text)
+
+success
+teal-700
+amber-100 (text)
+
+warning
+orange-600 
+amber-100 (text)
+
+error
+red-400
+orange-900(text)
+
+dark them
+----------------
+
+base
+oklch(25.33% 0.016 252.42)
+oklch(23.26% 0.014 253.1)
+oklch(21.15% 0.012 254.09) (text)
+oklch(97.807% 0.029 256.847) (text)
+
+primary
+indigo-500 oklch(58% 0.233 277.117)
+oklch(96% 0.018 272.314) indigo-50 (text)
+
+secondary
+oklch(65% 0.241 354.308) pink-500
+oklch(94% 0.028 342.258) pink-100 (text)
+
+accent
+oklch(77% 0.152 181.912) teal-400
+oklch(38% 0.063 188.416) teal-900 (text)
+
+neutral
+oklch(14% 0.005 285.823) zink-950
+oklch(92% 0.004 286.32) zink-200 (text)
+
+warning
+oklch(82% 0.189 84.429) amber-400
+oklch(41% 0.112 45.904) amber-900 (text)
+
+error
+oklch(71% 0.194 13.428) rose-400
+oklch(27% 0.105 12.094) rose-950
+
