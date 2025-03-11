@@ -1,7 +1,7 @@
 
 const AboutMe = () => {
   return (
-    <div>
+    <div className="bg-var(--maincolor)">
       hello i am the about page
     </div>
   )

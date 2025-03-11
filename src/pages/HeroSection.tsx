@@ -1,3 +1,4 @@
+import Ruller from "@/components/Ruller";
 import { RoughNotation } from "react-rough-notation";
 
 const HeroSection = () => {
@@ -33,7 +34,7 @@ const HeroSection = () => {
               {" "}who loves building dynamic and user-friendly applications. I enjoy solving problems, learning new things, and turning ideas into reality.
               </p>
 
-              <div className="mt-10 sm:flex sm:items-center sm:space-x-6">
+              <div className="mt-10 sm:flex sm:items-center sm:space-x-6 space-x-2">
                 <a
                   href="#"
                   title=""
@@ -61,6 +62,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
+        <Ruller></Ruller>
       </section>
     </div>
   );

@@ -8,9 +8,9 @@ const NavBar = () => {
   <div className="mx-auto max-w-6xl flex flex-wrap items-center justify-between py-6 px-4 sm:px-6 lg:px-8">
     <a  className="flex items-center space-x-3 rtl:space-x-reverse">
         
-        <span className="self-center text-2xl font-semibold whitespace-nowrap">Flowbite</span>
+        <span className="self-center text-2xl font-semibold whitespace-nowrap">{"< Bibek />"}</span>
     </a>
-    <button onClick={()=>{
+    {/* <button onClick={()=>{
       document.querySelector(".hambergCard")?.classList.toggle("hidden")
       
       
@@ -19,20 +19,23 @@ const NavBar = () => {
         <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
         </svg>
-    </button>
+        </button> */}
+      <span className="md:hidden">
+      <ModeToggle></ModeToggle>
+        </span>
     <div  className="hidden hambergCard w-full md:block md:w-auto" id="navbar-solid-bg">
       <ul className="flex flex-col font-medium mt-4 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 items-center ">
         <li>
-          <a href="#" className="block py-2 px-3 md:p-0 rounded-sm hover:bg-[oklch(84.133%_0.065_90.856)]" aria-current="page">Home</a>
+          <a href="#" className="block py-2 px-3 md:px-2 md:py-1 duration-150 rounded-sm dark:hover:bg-[oklch(25.33%_0.016_252.42)] hover:bg-[oklch(84.133%_0.065_90.856)]" aria-current="page">About</a>
         </li>
         <li>
-          <a href="#" className="block py-2 px-3 md:p-0 rounded-sm hover:bg-[oklch(84.133%_0.065_90.856)]">Services</a>
+          <a href="#" className="block py-2 px-3 md:px-2 md:py-1 duration-150 rounded-sm dark:hover:bg-[oklch(25.33%_0.016_252.42)] hover:bg-[oklch(84.133%_0.065_90.856)]">Education</a>
         </li>
         <li>
-          <a href="#" className="block py-2 px-3 md:p-0 rounded-sm hover:bg-[oklch(84.133%_0.065_90.856)]">Pricing</a>
+          <a href="#" className="block py-2 px-3 md:px-2 md:py-1 duration-150 rounded-sm dark:hover:bg-[oklch(25.33%_0.016_252.42)] hover:bg-[oklch(84.133%_0.065_90.856)]">Projects</a>
         </li>
         <li>
-          <a href="#" className="block py-2 px-3 md:p-0 rounded-sm hover:bg-[oklch(84.133%_0.065_90.856)]">Contact</a>
+          <a href="#" className="block py-2 px-3 md:px-2 md:py-1 duration-150 rounded-sm dark:hover:bg-[oklch(25.33%_0.016_252.42)] hover:bg-[oklch(84.133%_0.065_90.856)]">Contact</a>
         </li>
         <li>
           <ModeToggle></ModeToggle>
