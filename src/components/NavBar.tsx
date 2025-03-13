@@ -4,11 +4,11 @@ const NavBar = () => {
   return (
     
 
-<nav className="">
+<nav className="sticky top-0 z-10 bg-[oklch(91.637%_0.034_90.515)] dark:bg-[oklch(21.15%_0.012_254.09)]">
   <div className="mx-auto max-w-6xl flex flex-wrap items-center justify-between py-6 px-4 sm:px-6 lg:px-8">
     <a  className="flex items-center space-x-3 rtl:space-x-reverse">
         
-        <span className="self-center text-2xl font-semibold whitespace-nowrap">{"< Bibek />"}</span>
+        <span className="self-center text-4xl font-bold  whitespace-nowrap"><span className="text-[oklch(80%_0.114_19.571)] dark:text-[oklch(58%_0.233_277.117)] text-4xl font-bold">{"< "}</span>Bibek<span className="text-[oklch(80%_0.114_19.571)] dark:text-[oklch(58%_0.233_277.117)] text-4xl font-bold">{" />"}</span></span>
     </a>
     {/* <button onClick={()=>{
       document.querySelector(".hambergCard")?.classList.toggle("hidden")
