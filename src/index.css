@@ -4,6 +4,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --iconColr: rgb(120, 53, 15);
   --highlight-color: rgb(252, 165, 165);
