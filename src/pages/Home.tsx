@@ -1,7 +1,7 @@
 
 import NavBar from "@/components/NavBar"
 import HeroSection from "./HeroSection"
-import Skills from "./AboutMe"
+import Skills from "./Skills"
 import ContactMe from "./ContactMe"
 import Education from "./Education"
 import Projects from "./Projects"
