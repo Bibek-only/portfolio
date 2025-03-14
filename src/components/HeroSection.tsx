@@ -3,7 +3,7 @@ import { RoughNotation } from "react-rough-notation";
 
 const HeroSection = () => {
   return (
-    <div>
+    <div >
       <section id="heroSection" className="py-2 md:py-12 ">
         <div className="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8">
           <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">

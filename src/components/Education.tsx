@@ -1,4 +1,5 @@
 import { Briefcase, GraduationCap } from "lucide-react"
+import {RoughNotation} from "react-rough-notation"
 
 const educationData = [
   {
@@ -45,38 +46,44 @@ const educationData = [
 
 const TimelineItem = ({ item, isLast }:any) => {
   return (
-    <div className="relative pl-8 sm:pl-12 py-6">
-      <div className="absolute left-0 top-6 flex justify-center items-center w-8 h-8 rounded-full bg-[oklch(84.133%_0.065_90.856)] dark:bg-[oklch(25.33%_0.016_252.42)] text-white">
-        {item.type === "education" ? <GraduationCap size={18} /> : <Briefcase size={18} />}
+    <div  className="relative pl-8 sm:pl-12 py-6">
+      <div className="absolute left-0 top-6 flex justify-center items-center w-8 h-8 rounded-full bg-[oklch(84.133%_0.065_90.856)] dark:bg-[oklch(25.33%_0.016_252.42)] ">
+        {item.type === "education" ? <GraduationCap size={18} color="var(--iconColr)"  /> : <Briefcase size={18} color="var(--iconColr)"/>}
       </div>
 
-      {!isLast && <div className="absolute left-4 top-14 bottom-0 w-0.5 bg-stone-200 dark:bg-stone-700"></div>}
+      {!isLast && <div className="absolute left-4 top-14 bottom-0 w-0.5 dark:bg-indigo-500 bg-amber-900"></div>}
 
       <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-1">
         <h3 className="text-xl font-bold">{item.title}</h3>
-        <div className="px-3 py-1 text-xs font-medium bg-stone-200 dark:bg-stone-700 rounded-full">{item.duration}</div>
+        <div className="px-3 py-1 text-xs font-medium  rounded-full bg-stone-600 text-stone-300 dark:text-[oklch(97.807%_0.029_256.847)] dark:bg-[oklch(21.15%_0.012_254.09)]">{item.duration}</div>
       </div>
 
-      <div className="mb-2 text-stone-600 dark:text-stone-400">
+      <div className="mb-2 ">
         {item.institution} • {item.location}
       </div>
 
-      <p className="text-stone-600 dark:text-stone-400">{item.description}</p>
+      <p className="">{item.description}</p>
     </div>
   )
 }
 
 const EducationSection = () => {
   return (
-    <section id="education" className="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8">
+    <section  className="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8">
       <div className="">
         <div className=" mb-12">
-          <h2 className="text-3xl font-bold sm:text-4xl">
-            Education &{" "}
-            <span className="">
-              Experience
-            </span>
-          </h2>
+        <div className="text-3xl font-bold sm:text-4xl ">
+  <RoughNotation
+    type="underline"
+    color="var(--highlight-color)"
+    animationDelay={2500}
+    animationDuration={1500}
+    show
+  >
+    Education &{" "}
+    <span className="text-red-300 dark:text-indigo-500">Experience</span>
+  </RoughNotation>
+</div>
           <p className="mt-4  max-w-2xl ">
             My academic background and professional journey that have shaped my skills and expertise.
           </p>

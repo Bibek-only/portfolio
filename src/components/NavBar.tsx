@@ -26,16 +26,16 @@ const NavBar = () => {
     <div  className="hidden hambergCard w-full md:block md:w-auto" id="navbar-solid-bg">
       <ul className="flex flex-col font-medium mt-4 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 items-center ">
         <li>
-          <a href="#" className="block py-2 px-3 md:px-2 md:py-1 duration-150 rounded-sm dark:hover:bg-[oklch(25.33%_0.016_252.42)] hover:bg-[oklch(84.133%_0.065_90.856)]" aria-current="page">About</a>
+          <a href="#hero" className="block py-2 px-3 md:px-2 md:py-1 duration-150 rounded-sm dark:hover:bg-[oklch(25.33%_0.016_252.42)] hover:bg-[oklch(84.133%_0.065_90.856)]" aria-current="page">About</a>
         </li>
         <li>
-          <a href="#" className="block py-2 px-3 md:px-2 md:py-1 duration-150 rounded-sm dark:hover:bg-[oklch(25.33%_0.016_252.42)] hover:bg-[oklch(84.133%_0.065_90.856)]">Education</a>
+          <a href="#education" className="block py-2 px-3 md:px-2 md:py-1 duration-150 rounded-sm dark:hover:bg-[oklch(25.33%_0.016_252.42)] hover:bg-[oklch(84.133%_0.065_90.856)]">Education</a>
         </li>
         <li>
-          <a href="#" className="block py-2 px-3 md:px-2 md:py-1 duration-150 rounded-sm dark:hover:bg-[oklch(25.33%_0.016_252.42)] hover:bg-[oklch(84.133%_0.065_90.856)]">Projects</a>
+          <a href="#projects" className="block py-2 px-3 md:px-2 md:py-1 duration-150 rounded-sm dark:hover:bg-[oklch(25.33%_0.016_252.42)] hover:bg-[oklch(84.133%_0.065_90.856)]">Projects</a>
         </li>
         <li>
-          <a href="#" className="block py-2 px-3 md:px-2 md:py-1 duration-150 rounded-sm dark:hover:bg-[oklch(25.33%_0.016_252.42)] hover:bg-[oklch(84.133%_0.065_90.856)]">Contact</a>
+          <a href="#contact" className="block py-2 px-3 md:px-2 md:py-1 duration-150 rounded-sm dark:hover:bg-[oklch(25.33%_0.016_252.42)] hover:bg-[oklch(84.133%_0.065_90.856)]">Contact</a>
         </li>
         <li>
           <ModeToggle></ModeToggle>

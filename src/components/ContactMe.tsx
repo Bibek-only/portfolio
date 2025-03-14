@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { Github, Linkedin, Twitter, Mail, Send, MapPin, Phone } from "lucide-react"
+import { Github, Linkedin, Twitter, Mail, Send, MapPin, Phone,MessageCircleCode  } from "lucide-react"
+
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -42,14 +43,14 @@ const ContactSection = () => {
   }
 
   return (
-    <section id="contact" className="py-2 md:py-12 ">
+    <section  className="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8 py-5 ">
       <div className="ppx-4 mx-auto max-w-6xl sm:px-6 lg:px-8">
         <div className=" mb-12">
           <h2 className="text-3xl font-bold sm:text-4xl">
             Get in{" "}
-            <span className="text-[oklch(84.133%_0.065_90.856)] dark:text-[oklch(25.33%_0.016_252.42)]">Touch</span>
+            <span className="text-red-300 dark:text-indigo-500">Touch</span>
           </h2>
-          <p className="mt-4 text-stone-600 dark:text-stone-400 ">
+          <p className="mt-4  ">
             Have a project in mind or want to collaborate? Feel free to reach out to me through any of the channels
             below.
           </p>
@@ -60,12 +61,12 @@ const ContactSection = () => {
             <div className="bg-[oklch(84.133%_0.065_90.856)] dark:bg-[oklch(25.33%_0.016_252.42)] rounded-xl shadow-lg p-6 md:p-8">
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[oklch(84.133%_0.065_90.856)]/10 dark:bg-[oklch(25.33%_0.016_252.42)]/10 flex items-center justify-center text-[oklch(84.133%_0.065_90.856)] dark:text-[oklch(25.33%_0.016_252.42)]">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full  flex items-center justify-center ">
                     <MapPin size={20} />
                   </div>
                   <div>
                     <h3 className="text-lg font-medium mb-1">Location</h3>
-                    <p className="text-stone-600 dark:text-stone-400">New York, USA</p>
+                    <p className="">Odisha, India</p>
                   </div>
                 </div>
 
@@ -77,24 +78,24 @@ const ContactSection = () => {
                     <h3 className="text-lg font-medium mb-1">Email</h3>
                     <a
                       href="mailto:bibek@example.com"
-                      className="text-stone-600 dark:text-stone-400 hover:text-[oklch(84.133%_0.065_90.856)] dark:hover:text-[oklch(25.33%_0.016_252.42)] transition-colors"
+                      className="  transition-colors"
                     >
-                      bibek@example.com
+                      bibek.samal.917@gmail.com
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[oklch(84.133%_0.065_90.856)]/10 dark:bg-[oklch(25.33%_0.016_252.42)]/10 flex items-center justify-center text-[oklch(84.133%_0.065_90.856)] dark:text-[oklch(25.33%_0.016_252.42)]">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full  flex items-center justify-center ">
                     <Phone size={20} />
                   </div>
                   <div>
                     <h3 className="text-lg font-medium mb-1">Phone</h3>
                     <a
                       href="tel:+1234567890"
-                      className="text-stone-600 dark:text-stone-400 hover:text-[oklch(84.133%_0.065_90.856)] dark:hover:text-[oklch(25.33%_0.016_252.42)] transition-colors"
+                      className="t transition-colors"
                     >
-                      +1 (234) 567-890
+                      +9178240594
                     </a>
                   </div>
                 </div>
@@ -107,7 +108,7 @@ const ContactSection = () => {
                     href="https://github.com/username"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-stone-200 dark:bg-stone-700 flex items-center justify-center text-stone-600 dark:text-stone-400 hover:bg-[oklch(84.133%_0.065_90.856)] dark:hover:bg-[oklch(25.33%_0.016_252.42)] hover:text-white transition-colors"
+                    className="w-10 h-10 rounded-full dark:text-[oklch(97.807%_0.029_256.847)]  dark:bg-[oklch(21.15%_0.012_254.09)] flex items-center justify-center bg-stone-600 text-stone-300 transition-colors"
                     aria-label="GitHub"
                   >
                     <Github size={20} />
@@ -116,7 +117,7 @@ const ContactSection = () => {
                     href="https://linkedin.com/in/username"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-stone-200 dark:bg-stone-700 flex items-center justify-center text-stone-600 dark:text-stone-400 hover:bg-[oklch(84.133%_0.065_90.856)] dark:hover:bg-[oklch(25.33%_0.016_252.42)] hover:text-white transition-colors"
+                    className="w-10 h-10 rounded-full dark:text-[oklch(97.807%_0.029_256.847)]  dark:bg-[oklch(21.15%_0.012_254.09)] flex items-center justify-center bg-stone-600 text-stone-300 transition-colors"
                     aria-label="LinkedIn"
                   >
                     <Linkedin size={20} />
@@ -125,10 +126,19 @@ const ContactSection = () => {
                     href="https://twitter.com/username"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-stone-200 dark:bg-stone-700 flex items-center justify-center text-stone-600 dark:text-stone-400 hover:bg-[oklch(84.133%_0.065_90.856)] dark:hover:bg-[oklch(25.33%_0.016_252.42)] hover:text-white transition-colors"
+                    className="w-10 h-10 rounded-full dark:text-[oklch(97.807%_0.029_256.847)]  dark:bg-[oklch(21.15%_0.012_254.09)] flex items-center justify-center bg-stone-600 text-stone-300 transition-colors"
                     aria-label="Twitter"
                   >
                     <Twitter size={20} />
+                  </a>
+                  <a
+                    href="https://twitter.com/username"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full dark:text-[oklch(97.807%_0.029_256.847)]  dark:bg-[oklch(21.15%_0.012_254.09)] flex items-center justify-center bg-stone-600 text-stone-300 transition-colors"
+                    aria-label="Twitter"
+                  >
+                    <MessageCircleCode  size={20} />
                   </a>
                 </div>
               </div>
@@ -150,7 +160,7 @@ const ContactSection = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-stone-300 dark:border-stone-600 bg-[oklch(91.637%_0.034_90.515)] dark:bg-[oklch(21.15%_0.012_254.09)] text-stone-800 dark:text-stone-200 focus:outline-none focus:ring-2 focus:ring-[oklch(84.133%_0.065_90.856)] dark:focus:ring-[oklch(25.33%_0.016_252.42)]"
+                      className="w-full px-4 py-3 rounded-lg border   bg-[oklch(91.637%_0.034_90.515)] dark:bg-[oklch(21.15%_0.012_254.09)] text-amber-900 dark:text-[oklch(97.807%_0.029_256.847)] focus:outline-none focus:ring-1 dark:focus:ring-indigo-500 ocus:ring-red-500"
                       placeholder="John Doe"
                     />
                   </div>
@@ -165,7 +175,7 @@ const ContactSection = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-stone-300 dark:border-stone-600 bg-[oklch(91.637%_0.034_90.515)] dark:bg-[oklch(21.15%_0.012_254.09)] text-stone-800 dark:text-stone-200 focus:outline-none focus:ring-2 focus:ring-[oklch(84.133%_0.065_90.856)] dark:focus:ring-[oklch(25.33%_0.016_252.42)]"
+                      className="w-full px-4 py-3 rounded-lg border  bg-[oklch(91.637%_0.034_90.515)] dark:bg-[oklch(21.15%_0.012_254.09)] text-amber-900 dark:text-[oklch(97.807%_0.029_256.847)] focus:outline-none focus:ring-1 dark:focus:ring-indigo-500 ocus:ring-red-500"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -181,7 +191,7 @@ const ContactSection = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-stone-300 dark:border-stone-600 bg-[oklch(91.637%_0.034_90.515)] dark:bg-[oklch(21.15%_0.012_254.09)] text-stone-800 dark:text-stone-200 focus:outline-none focus:ring-2 focus:ring-[oklch(84.133%_0.065_90.856)] dark:focus:ring-[oklch(25.33%_0.016_252.42)]"
+                    className="w-full px-4 py-3 rounded-lg border  bg-[oklch(91.637%_0.034_90.515)] dark:bg-[oklch(21.15%_0.012_254.09)] text-amber-900 dark:text-[oklch(97.807%_0.029_256.847)] focus:outline-none focus:ring-1 dark:focus:ring-indigo-500 ocus:ring-red-500"
                     placeholder="Project Inquiry"
                   />
                 </div>
@@ -196,14 +206,14 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 rounded-lg border border-stone-300 dark:border-stone-600 bg-[oklch(91.637%_0.034_90.515)] dark:bg-[oklch(21.15%_0.012_254.09)] text-stone-800 dark:text-stone-200 focus:outline-none focus:ring-2 focus:ring-[oklch(84.133%_0.065_90.856)] dark:focus:ring-[oklch(25.33%_0.016_252.42)]"
+                    className="w-full px-4 py-3 rounded-lg border  bg-[oklch(91.637%_0.034_90.515)] dark:bg-[oklch(21.15%_0.012_254.09)]  focus:outline-none text-amber-900 dark:text-[oklch(97.807%_0.029_256.847)] focus:ring-1 dark:focus:ring-indigo-500 ocus:ring-red-500 "
                     placeholder="Your message here..."
                   ></textarea>
                 </div>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-stone-600 dark:bg-zink-950 text-stone-300 dark:text-zink-200 font-medium hover:opacity-90 transition-opacity disabled:opacity-70"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-stone-600 dark:bg-[oklch(21.15%_0.012_254.09)] text-stone-300 dark:text-[oklch(97.807%_0.029_256.847)] font-medium hover:opacity-90 transition-opacity disabled:opacity-70"
                 >
                   {isSubmitting ? (
                     <>

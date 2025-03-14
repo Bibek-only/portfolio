@@ -2,7 +2,7 @@ import { RoughNotation } from "react-rough-notation";
 
 const Skills = () => {
   return (
-    <section className="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8 py-5 ">
+    <section  className="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8 py-5 ">
       <RoughNotation
         type="underline"
         color="var(--highlight-color)"
@@ -10,7 +10,7 @@ const Skills = () => {
         animationDuration={1500}
         show
       >
-        <span className="text-4xl font-bold">Skills</span>
+        <span className="text-4xl font-bold">Skills & <span className="text-red-300 dark:text-indigo-500">technology</span></span>
       </RoughNotation>
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 md:py-8">
         <div className="h-32 rounded-lg   flex items-center flex-col justify-center">
