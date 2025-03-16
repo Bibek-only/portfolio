@@ -55,7 +55,7 @@ const TimelineItem = ({ item, isLast }:any) => {
 
       <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-1">
         <h3 className="text-xl font-bold">{item.title}</h3>
-        <div className="px-3 py-1 text-xs font-medium  rounded-full bg-stone-600 text-stone-300 dark:text-[oklch(97.807%_0.029_256.847)] dark:bg-[oklch(21.15%_0.012_254.09)]">{item.duration}</div>
+        <div className="px-3 py-1 text-xs font-medium  rounded-full bg-stone-600 text-stone-300 dark:text-[oklch(97.807%_0.029_256.847)] dark:bg-[oklch(21.15%_0.012_254.09)] w-max">{item.duration}</div>
       </div>
 
       <div className="mb-2 ">

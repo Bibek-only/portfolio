@@ -1,5 +1,6 @@
 
 import { RoughNotation } from "react-rough-notation";
+import {motion} from "motion/react"
 
 const HeroSection = () => {
   return (
@@ -56,9 +57,12 @@ const HeroSection = () => {
               </div>
             </div>
 
-            <div>
+            <div className="flex items-center justify-center lg:order-last order-first">
               
-              <img className="w-full"  src="" alt="" />
+              <motion.img className="md:w-72 w-40"  src="https://imgs.search.brave.com/N-i6pV6OiSOjGk2z5F5LyTgqCwSirkojSot7ZfddFZo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbmFj/b21wLm5ldC93cC1j/b250ZW50L3VwbG9h/ZHMvcmV2c2xpZGVy/L1RoZTctZmFuY3kt/dGl0bGUtYnVzaW5l/c3MvcmV2LXBlcnNv/bi1pbWcucG5n" alt=""
+              
+              >
+              </motion.img>.
             </div>
           </div>
         </div>
