@@ -1,6 +1,15 @@
-import { useState } from "react"
-import { Github, Linkedin, Twitter, Mail, Send, MapPin, Phone,MessageCircleCode  } from "lucide-react"
-
+import { useState } from "react";
+import {
+  Github,
+  Linkedin,
+  Twitter,
+  Mail,
+  Send,
+  MapPin,
+  Phone,
+  MessageCircleCode,
+} from "lucide-react";
+import { RoughNotation } from "react-rough-notation";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -8,51 +17,59 @@ const ContactSection = () => {
     email: "",
     subject: "",
     message: "",
-  })
+  });
 
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus]:any= useState(null)
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus]: any = useState(null);
 
-  const handleChange = (e:any) => {
+  const handleChange = (e: any) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    })
-  }
+    });
+  };
 
-  const handleSubmit = (e:any) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    setIsSubmitting(true);
 
     // Simulate form submission
     setTimeout(() => {
-      setIsSubmitting(false)
-      setSubmitStatus("success")
+      setIsSubmitting(false);
+      setSubmitStatus("success");
       setFormData({
         name: "",
         email: "",
         subject: "",
         message: "",
-      })
+      });
 
       // Reset status after 5 seconds
       setTimeout(() => {
-        setSubmitStatus(null)
-      }, 5000)
-    }, 1500)
-  }
+        setSubmitStatus(null);
+      }, 5000);
+    }, 1500);
+  };
 
   return (
-    <section  className="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8 py-5 ">
-      <div className="ppx-4 mx-auto max-w-6xl sm:px-6 lg:px-8">
-        <div className=" mb-12">
+    <section className="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8 py-5 ">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-12">
           <h2 className="text-3xl font-bold sm:text-4xl">
-            Get in{" "}
-            <span className="text-red-300 dark:text-indigo-500">Touch</span>
+            <RoughNotation
+              type="underline"
+              color="var(--highlight-color)"
+              animationDelay={2500}
+              animationDuration={1500}
+              show
+            >
+              Get in{" "}
+              <span className="text-red-300 dark:text-indigo-500">Touch</span>
+            </RoughNotation>
           </h2>
-          <p className="mt-4  ">
-            Have a project in mind or want to collaborate? Feel free to reach out to me through any of the channels
-            below.
+          <p className="mt-4">
+            Have a project in mind or want to collaborate? Feel free to reach
+            out to me through any of the channels below.
           </p>
         </div>
 
@@ -91,10 +108,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium mb-1">Phone</h3>
-                    <a
-                      href="tel:+1234567890"
-                      className="t transition-colors"
-                    >
+                    <a href="tel:+1234567890" className="t transition-colors">
                       +9178240594
                     </a>
                   </div>
@@ -138,7 +152,7 @@ const ContactSection = () => {
                     className="w-10 h-10 rounded-full dark:text-[oklch(97.807%_0.029_256.847)]  dark:bg-[oklch(21.15%_0.012_254.09)] flex items-center justify-center bg-stone-600 text-stone-300 transition-colors"
                     aria-label="Twitter"
                   >
-                    <MessageCircleCode  size={20} />
+                    <MessageCircleCode size={20} />
                   </a>
                 </div>
               </div>
@@ -150,7 +164,10 @@ const ContactSection = () => {
               <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Your Name
                     </label>
                     <input
@@ -165,7 +182,10 @@ const ContactSection = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Your Email
                     </label>
                     <input
@@ -181,7 +201,10 @@ const ContactSection = () => {
                   </div>
                 </div>
                 <div className="mb-6">
-                  <label htmlFor="subject" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Subject
                   </label>
                   <input
@@ -196,7 +219,10 @@ const ContactSection = () => {
                   />
                 </div>
                 <div className="mb-6">
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Message
                   </label>
                   <textarea
@@ -249,7 +275,8 @@ const ContactSection = () => {
 
                 {submitStatus === "success" && (
                   <div className="mt-4 p-3 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 rounded-lg">
-                    Your message has been sent successfully. I'll get back to you soon!
+                    Your message has been sent successfully. I'll get back to
+                    you soon!
                   </div>
                 )}
               </form>
@@ -258,19 +285,7 @@ const ContactSection = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ContactSection
-
-    // <section className="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8 py-5 ">
-    //   <RoughNotation
-    //                 type="underline"
-    //                 color="var(--highlight-color)"
-    //                 animationDelay={2500} animationDuration={1500}
-    //                 show
-    //               >
-       
-    //     <span className="text-4xl font-bold">Contact me</span>
-    //   </RoughNotation >
-    // </section>
+export default ContactSection;
