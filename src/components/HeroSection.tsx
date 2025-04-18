@@ -61,7 +61,7 @@ const HeroSection = () => {
                     const phoneNumber = "9178240594";
                     const message = encodeURIComponent(
                       `Hello Bibek,
-                      I just came across your portfolio and I’m impressed! I’d love to connect and explore potential opportunities or collaborations.`
+I just came across your portfolio and I’m impressed! I’d love to connect and explore potential opportunities or collaborations.`
                     );
                     const url = `https://wa.me/${phoneNumber}?text=${message}`;
                     window.open(url, "_blank"); // Opens WhatsApp in a new tab
