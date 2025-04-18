@@ -14,6 +14,32 @@ interface ProjectData {
 // Sample project data
 const projectsData: ProjectData[] = [
   {
+    name: "Rapid Room",
+    image:
+      "https://imgs.search.brave.com/YZ1SjLQxhbj0Pd5D19P6s61NQ7GMYKNHOnjLmt8DrdQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzA1/MzMvMjA4OS9maWxl/cy9wbGFjZWhvbGRl/ci1pbWFnZXMtaW1h/Z2VfbGFyZ2UucG5n/P3Y9MTUzMDEyOTA4/MQ", // You can add the image link here
+    description:
+      "A full-stack hotel booking application with an admin and host dashboard. Hosts can add hotels, and users can book hotels.",
+    techStack: [
+      "React",
+      "PostgreSQL",
+      "Express",
+      "Node.js",
+      "Tailwind CSS",
+      "Redux",
+      "React Router DOM",
+      "Zod",
+      "React Hook Form",
+      "TypeScript",
+      "Cloudinary",
+      "Razorpay",
+      "Botpress",
+      "Nodemailer",
+      "Bcryptjs"
+    ],
+    link: "https://rapidroom.tech",
+  }
+  ,
+  {
     name: "BibeBlog",
     image: "https://imgs.search.brave.com/YZ1SjLQxhbj0Pd5D19P6s61NQ7GMYKNHOnjLmt8DrdQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzA1/MzMvMjA4OS9maWxl/cy9wbGFjZWhvbGRl/ci1pbWFnZXMtaW1h/Z2VfbGFyZ2UucG5n/P3Y9MTUzMDEyOTA4/MQ",
     description: "A full-stack blogging platform enabling users to create, post, and manage blogs seamlessly. Features include secure authentication, rich-text blog creation, and a user-friendly dashboard.",
