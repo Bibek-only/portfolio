@@ -88,13 +88,13 @@ const ContactSection = () => {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[oklch(84.133%_0.065_90.856)]/10 dark:bg-[oklch(25.33%_0.016_252.42)]/10 flex items-center justify-center text-[oklch(84.133%_0.065_90.856)] dark:text-[oklch(25.33%_0.016_252.42)]">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full  flex items-center justify-center ">
                     <Mail size={20} />
                   </div>
                   <div>
                     <h3 className="text-lg font-medium mb-1">Email</h3>
                     <a
-                      href="mailto:bibek@example.com"
+                      href="mailto:bibek.samal.917@gmail.com"
                       className="  transition-colors"
                     >
                       bibek.samal.917@gmail.com
@@ -108,7 +108,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium mb-1">Phone</h3>
-                    <a href="tel:+1234567890" className="t transition-colors">
+                    <a href="tel:+9178240594" className="t transition-colors">
                       +9178240594
                     </a>
                   </div>
@@ -178,7 +178,7 @@ const ContactSection = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 rounded-lg border   bg-[oklch(91.637%_0.034_90.515)] dark:bg-[oklch(21.15%_0.012_254.09)] text-amber-900 dark:text-[oklch(97.807%_0.029_256.847)] focus:outline-none focus:ring-1 dark:focus:ring-indigo-500 ocus:ring-red-500"
-                      placeholder="John Doe"
+                      placeholder="Your Name"
                     />
                   </div>
                   <div>
@@ -196,7 +196,7 @@ const ContactSection = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 rounded-lg border  bg-[oklch(91.637%_0.034_90.515)] dark:bg-[oklch(21.15%_0.012_254.09)] text-amber-900 dark:text-[oklch(97.807%_0.029_256.847)] focus:outline-none focus:ring-1 dark:focus:ring-indigo-500 ocus:ring-red-500"
-                      placeholder="john@example.com"
+                      placeholder="email@gamil.com"
                     />
                   </div>
                 </div>
@@ -215,7 +215,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 rounded-lg border  bg-[oklch(91.637%_0.034_90.515)] dark:bg-[oklch(21.15%_0.012_254.09)] text-amber-900 dark:text-[oklch(97.807%_0.029_256.847)] focus:outline-none focus:ring-1 dark:focus:ring-indigo-500 ocus:ring-red-500"
-                    placeholder="Project Inquiry"
+                    placeholder="Your Subject"
                   />
                 </div>
                 <div className="mb-6">

@@ -14,51 +14,42 @@ interface ProjectData {
 // Sample project data
 const projectsData: ProjectData[] = [
   {
-    name: "E-Commerce Platform",
-    image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    description:
-      "A full-featured e-commerce platform with product listings, cart functionality, and payment integration.",
-    techStack: ["React", "Node.js", "MongoDB", "Stripe API"],
-    link: "https://github.com/project/ecommerce",
+    name: "BibeBlog",
+    image: "https://imgs.search.brave.com/YZ1SjLQxhbj0Pd5D19P6s61NQ7GMYKNHOnjLmt8DrdQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzA1/MzMvMjA4OS9maWxl/cy9wbGFjZWhvbGRl/ci1pbWFnZXMtaW1h/Z2VfbGFyZ2UucG5n/P3Y9MTUzMDEyOTA4/MQ",
+    description: "A full-stack blogging platform enabling users to create, post, and manage blogs seamlessly. Features include secure authentication, rich-text blog creation, and a user-friendly dashboard.",
+    techStack: ["React.js", "Cloudflare Workers", "Hono", "PostgreSQL", "Prisma"],
+    link: "https://github.com/Bibek-only/BibeBlog",
   },
   {
-    name: "Task Management App",
-    image:
-      "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
-    description:
-      "A Kanban-style task management application for teams with real-time updates.",
-    techStack: ["Vue.js", "Firebase", "Tailwind CSS", "Jest"],
-    link: "https://github.com/project/taskmanager",
+    name: "Paytm Wallet (PayVibe)",
+    image: "https://imgs.search.brave.com/YZ1SjLQxhbj0Pd5D19P6s61NQ7GMYKNHOnjLmt8DrdQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzA1/MzMvMjA4OS9maWxl/cy9wbGFjZWhvbGRl/ci1pbWFnZXMtaW1h/Z2VfbGFyZ2UucG5n/P3Y9MTUzMDEyOTA4/MQ",
+    description: "A digital wallet application allowing users to sign in and securely transfer money to other registered users. Includes user registration, secure money transfers, and payment history tracking.",
+    techStack: ["React", "Recoil", "React Router", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "Zod"],
+    link: "https://github.com/Bibek-only/paytm",
   },
   {
-    name: "Weather Dashboard",
-    image:
-      "https://images.unsplash.com/photo-1530908295418-a12e326966ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    description:
-      "Interactive weather dashboard with location-based forecasts and historical data visualization.",
-    techStack: ["React", "D3.js", "OpenWeather API", "Styled Components"],
-    link: "https://github.com/project/weatherdash",
+    name: "X-UI Clone",
+    image: "https://imgs.search.brave.com/YZ1SjLQxhbj0Pd5D19P6s61NQ7GMYKNHOnjLmt8DrdQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzA1/MzMvMjA4OS9maWxl/cy9wbGFjZWhvbGRl/ci1pbWFnZXMtaW1h/Z2VfbGFyZ2UucG5n/P3Y9MTUzMDEyOTA4/MQ",
+    description: "A frontend clone of the X-UI interface, replicating the user interface using modern web technologies.",
+    techStack: ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+    link: "https://github.com/Bibek-only/X-UI-clone",
   },
   {
-    name: "Social Media Analytics",
-    image:
-      "https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
-    description:
-      "Tool for analyzing social media engagement and growth metrics across platforms.",
-    techStack: ["Next.js", "GraphQL", "Chart.js", "PostgreSQL"],
-    link: "https://github.com/project/socialanalytics",
+    name: "Amazon UI Clone",
+    image: "https://imgs.search.brave.com/YZ1SjLQxhbj0Pd5D19P6s61NQ7GMYKNHOnjLmt8DrdQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzA1/MzMvMjA4OS9maWxl/cy9wbGFjZWhvbGRl/ci1pbWFnZXMtaW1h/Z2VfbGFyZ2UucG5n/P3Y9MTUzMDEyOTA4/MQ",
+    description: "A static frontend clone of Amazon's user interface, built with HTML and CSS to replicate the design and layout.",
+    techStack: ["HTML", "CSS"],
+    link: "https://github.com/Bibek-only/Amazon-ui-clone",
   },
   {
-    name: "AI Image Generator",
-    image:
-      "https://images.unsplash.com/photo-1636633762833-5d1658f1e29b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80",
-    description:
-      "Web application that leverages AI to generate custom images from text descriptions.",
-    techStack: ["Python", "TensorFlow", "FastAPI", "React"],
-    link: "https://github.com/project/aiimagegen",
+    name: "Spotify Clone",
+    image: "https://imgs.search.brave.com/YZ1SjLQxhbj0Pd5D19P6s61NQ7GMYKNHOnjLmt8DrdQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzA1/MzMvMjA4OS9maWxl/cy9wbGFjZWhvbGRl/ci1pbWFnZXMtaW1h/Z2VfbGFyZ2UucG5n/P3Y9MTUzMDEyOTA4/MQ",
+    description: "A frontend clone of Spotify's user interface, recreating the design and layout using modern web technologies.",
+    techStack: ["HTML", "CSS", "JavaScript"],
+    link: "https://github.com/Bibek-only/spotify",
   },
 ];
+
 
 const Projects = () => {
   const sliderRef = useRef(null);
