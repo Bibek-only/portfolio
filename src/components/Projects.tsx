@@ -136,29 +136,7 @@ const Projects = () => {
       </RoughNotation>
 
       <section className="relative mt-12">
-        {/* Left Navigation Arrow */}
-        <button
-          ref={keenSliderPrev}
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white dark:bg-gray-800 rounded-full p-2 shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-all -ml-4 md:ml-2"
-          aria-label="Previous slide"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M15.75 19.5L8.25 12l7.5-7.5"
-            />
-          </svg>
-        </button>
-
-        {/* Slider Container */}
+        {/* Slider Container - removed side navigation buttons */}
         <div className="overflow-hidden">
           <div ref={sliderRef} className="keen-slider flex">
             {projectsData.map((project, index) => (
@@ -174,37 +152,60 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* Right Navigation Arrow */}
-        <button
-          ref={keenSliderNext}
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white dark:bg-gray-800 rounded-full p-2 shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-all -mr-4 md:mr-2"
-          aria-label="Next slide"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="currentColor"
-            className="w-6 h-6"
+        {/* New Bottom Navigation with Pagination Counter */}
+        <div className="flex justify-center items-center mt-6 gap-4">
+          <button
+            ref={keenSliderPrev}
+            className="rounded-full p-2 shadow-lg bg-amber-900 text-[oklch(84.133%_0.065_90.856)] dark:text-white dark:bg-[oklch(25.33%_0.016_252.42)] transition-all hover:opacity-80"
+            aria-label="Previous slide"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M8.25 4.5l7.5 7.5-7.5 7.5"
-            />
-          </svg>
-        </button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-5 h-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
+            </svg>
+          </button>
 
-        {/* Pagination Counter */}
-        <div className="flex justify-center items-center mt-6 gap-2">
-          <span ref={keenSliderActive} className="text-lg font-bold">
-            1
-          </span>
-          <span className="text-lg">/</span>
-          <span ref={keenSliderCount} className="text-lg">
-            {projectsData.length}
-          </span>
+          {/* Pagination Counter */}
+          <div className="flex items-center gap-2">
+            <span ref={keenSliderActive} className="text-lg font-bold">
+              1
+            </span>
+            <span className="text-lg">/</span>
+            <span ref={keenSliderCount} className="text-lg">
+              {projectsData.length}
+            </span>
+          </div>
+
+          <button
+            ref={keenSliderNext}
+            className="rounded-full p-2 shadow-lg bg-amber-900 text-[oklch(84.133%_0.065_90.856)] dark:bg-[oklch(25.33%_0.016_252.42)] dark:text-white transition-all hover:opacity-80"
+            aria-label="Next slide"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-5 h-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </button>
         </div>
       </section>
     </section>
@@ -230,7 +231,7 @@ function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div className="keen-slider__slide opacity-40 transition-opacity duration-500 px-3">
-      <div className="rounded-lg shadow-md overflow-hidden h-full flex flex-col bg-white dark:bg-gray-800">
+      <div className="rounded-lg shadow-md overflow-hidden h-full flex flex-col bg-[oklch(84.133%_0.065_90.856)] dark:bg-[oklch(25.33%_0.016_252.42)]">
         {/* Project Image */}
         <div className="h-48 sm:h-56 overflow-hidden">
           <img
@@ -244,16 +245,14 @@ function ProjectCard({
         <div className="p-5 flex flex-col flex-grow">
           <h3 className="text-xl font-bold mb-2">{name}</h3>
 
-          <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3 flex-grow">
-            {description}
-          </p>
+          <p className=" mb-4 line-clamp-3 flex-grow">{description}</p>
 
           {/* Tech Stack Tags */}
           <div className="flex flex-wrap gap-2 mb-4">
             {techStack.map((tech, index) => (
               <span
                 key={index}
-                className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-800 dark:text-gray-200"
+                className="text-xs px-2 py-1 rounded-full bg-stone-600 text-stone-300 dark:text-[oklch(97.807%_0.029_256.847)] dark:bg-[oklch(21.15%_0.012_254.09)]"
               >
                 {tech}
               </span>
@@ -265,7 +264,7 @@ function ProjectCard({
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline font-medium"
+            className="inline-flex items-center text-indigo-500 hover:text-indigo-600  hover:underline font-medium"
           >
             View Project
             <svg
