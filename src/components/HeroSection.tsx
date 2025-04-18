@@ -59,11 +59,12 @@ const HeroSection = () => {
                 <button
                   onClick={() => {
                     const phoneNumber = "9178240594";
-
                     const message = encodeURIComponent(
-                      `Hi, Bibek nice to connect with you`
+                      `Hello Bibek,
+                      I just came across your portfolio and I’m impressed! I’d love to connect and explore potential opportunities or collaborations.`
                     );
-                    return `https://wa.me/${phoneNumber}?text=${message}`;
+                    const url = `https://wa.me/${phoneNumber}?text=${message}`;
+                    window.open(url, "_blank"); // Opens WhatsApp in a new tab
                   }}
                   className="w-full sm:w-auto inline-flex items-center justify-center px-10 py-4 text-base font-semibold transition-all duration-200 bg-[oklch(84.133%_0.065_90.856)] dark:bg-[oklch(25.33%_0.016_252.42)] cursor-pointer"
                 >
