@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import {
   Github,
   Linkedin,
@@ -10,6 +10,7 @@ import {
   MessageCircleCode,
 } from "lucide-react";
 import { RoughNotation } from "react-rough-notation";
+import emailjs from "@emailjs/browser";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -20,7 +21,12 @@ const ContactSection = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus]: any = useState(null);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
+
+  const form = useRef<HTMLFormElement>(null);
 
   const handleChange = (e: any) => {
     setFormData({
@@ -29,26 +35,58 @@ const ContactSection = () => {
     });
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: "" });
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus("success");
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
+    // Current timestamp for the email
+    const currentTime = new Date().toLocaleString();
 
-      // Reset status after 5 seconds
-      setTimeout(() => {
-        setSubmitStatus(null);
-      }, 5000);
-    }, 1500);
+    // Prepare template parameters according to requirements
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      title: formData.subject,
+      message: formData.message,
+      time: currentTime,
+      to_email: "bibekbibek966@gmail.com",
+    };
+
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAIL_SERVICE,
+        import.meta.env.VITE_EMAIL_TEMPLATE,
+        templateParams,
+        import.meta.env.VITE_PUBLIC_KEY
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          setSubmitStatus({
+            type: "success",
+            message:
+              "Your message has been sent successfully. I'll get back to you soon!",
+          });
+          setIsSubmitting(false);
+
+          // Reset form
+          setFormData({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log("FAILED...", error);
+          setIsSubmitting(false);
+          setSubmitStatus({
+            type: "error",
+            message: "Failed to send your message. Please try again later.",
+          });
+        }
+      );
   };
 
   return (
@@ -88,7 +126,7 @@ const ContactSection = () => {
                 </div>
 
                 <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full  flex items-center justify-center ">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full  flex items-center justify-center ">
                     <Mail size={20} />
                   </div>
                   <div>
@@ -161,7 +199,7 @@ const ContactSection = () => {
 
           <div className="lg:col-span-2">
             <div className="bg-[oklch(84.133%_0.065_90.856)] dark:bg-[oklch(23.26%_0.014_253.1)] rounded-xl shadow-lg p-6 md:p-8">
-              <form onSubmit={handleSubmit}>
+              <form ref={form} onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
                   <div>
                     <label
@@ -177,7 +215,7 @@ const ContactSection = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg border   bg-[oklch(91.637%_0.034_90.515)] dark:bg-[oklch(21.15%_0.012_254.09)] text-amber-900 dark:text-[oklch(97.807%_0.029_256.847)] focus:outline-none focus:ring-1 dark:focus:ring-indigo-500 ocus:ring-red-500"
+                      className="w-full px-4 py-3 rounded-lg border   bg-[oklch(91.637%_0.034_90.515)] dark:bg-[oklch(21.15%_0.012_254.09)] text-amber-900 dark:text-[oklch(97.807%_0.029_256.847)] focus:outline-none focus:ring-1 dark:focus:ring-indigo-500 focus:ring-red-500"
                       placeholder="Your Name"
                     />
                   </div>
@@ -195,8 +233,8 @@ const ContactSection = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg border  bg-[oklch(91.637%_0.034_90.515)] dark:bg-[oklch(21.15%_0.012_254.09)] text-amber-900 dark:text-[oklch(97.807%_0.029_256.847)] focus:outline-none focus:ring-1 dark:focus:ring-indigo-500 ocus:ring-red-500"
-                      placeholder="email@gamil.com"
+                      className="w-full px-4 py-3 rounded-lg border  bg-[oklch(91.637%_0.034_90.515)] dark:bg-[oklch(21.15%_0.012_254.09)] text-amber-900 dark:text-[oklch(97.807%_0.029_256.847)] focus:outline-none focus:ring-1 dark:focus:ring-indigo-500 focus:ring-red-500"
+                      placeholder="email@gmail.com"
                     />
                   </div>
                 </div>
@@ -214,7 +252,7 @@ const ContactSection = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border  bg-[oklch(91.637%_0.034_90.515)] dark:bg-[oklch(21.15%_0.012_254.09)] text-amber-900 dark:text-[oklch(97.807%_0.029_256.847)] focus:outline-none focus:ring-1 dark:focus:ring-indigo-500 ocus:ring-red-500"
+                    className="w-full px-4 py-3 rounded-lg border  bg-[oklch(91.637%_0.034_90.515)] dark:bg-[oklch(21.15%_0.012_254.09)] text-amber-900 dark:text-[oklch(97.807%_0.029_256.847)] focus:outline-none focus:ring-1 dark:focus:ring-indigo-500 focus:ring-red-500"
                     placeholder="Your Subject"
                   />
                 </div>
@@ -232,7 +270,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 rounded-lg border  bg-[oklch(91.637%_0.034_90.515)] dark:bg-[oklch(21.15%_0.012_254.09)]  focus:outline-none text-amber-900 dark:text-[oklch(97.807%_0.029_256.847)] focus:ring-1 dark:focus:ring-indigo-500 ocus:ring-red-500 "
+                    className="w-full px-4 py-3 rounded-lg border  bg-[oklch(91.637%_0.034_90.515)] dark:bg-[oklch(21.15%_0.012_254.09)]  focus:outline-none text-amber-900 dark:text-[oklch(97.807%_0.029_256.847)] focus:ring-1 dark:focus:ring-indigo-500 focus:ring-red-500 "
                     placeholder="Your message here..."
                   ></textarea>
                 </div>
@@ -273,10 +311,43 @@ const ContactSection = () => {
                   )}
                 </button>
 
-                {submitStatus === "success" && (
-                  <div className="mt-4 p-3 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 rounded-lg">
-                    Your message has been sent successfully. I'll get back to
-                    you soon!
+                {submitStatus.type === "success" && (
+                  <div className="mt-4 p-3 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 rounded-lg flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    {submitStatus.message}
+                  </div>
+                )}
+
+                {submitStatus.type === "error" && (
+                  <div className="mt-4 p-3 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 rounded-lg flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                    {submitStatus.message}
                   </div>
                 )}
               </form>
