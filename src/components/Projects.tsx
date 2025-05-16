@@ -77,7 +77,7 @@ const projectsData: ProjectData[] = [
   },
   {
     name: "Spotify Clone",
-    image: "https://imgs.search.brave.com/YZ1SjLQxhbj0Pd5D19P6s61NQ7GMYKNHOnjLmt8DrdQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzA1/MzMvMjA4OS9maWxl/cy9wbGFjZWhvbGRl/ci1pbWFnZXMtaW1h/Z2VfbGFyZ2UucG5n/P3Y9MTUzMDEyOTA4/MQ",
+    image: "/spotify.png",
     description: "A frontend clone of Spotify's user interface, recreating the design and layout using modern web technologies.",
     techStack: ["HTML", "CSS", "JavaScript"],
     link: "https://spotify-de2n.onrender.com/",
