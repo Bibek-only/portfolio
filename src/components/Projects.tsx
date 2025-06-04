@@ -15,8 +15,7 @@ interface ProjectData {
 const projectsData: ProjectData[] = [
   {
     name: "Rapid Room",
-    image:
-      "/hotel.png", // You can add the image link here
+    image: "/hotel.png", // You can add the image link here
     description:
       "A full-stack hotel booking application with an admin and host dashboard. Hosts can add hotels, and users can book hotels.",
     techStack: [
@@ -34,14 +33,13 @@ const projectsData: ProjectData[] = [
       "Razorpay",
       "Botpress",
       "Nodemailer",
-      "Bcryptjs"
+      "Bcryptjs",
     ],
     link: "https://rapidroom.tech",
   },
   {
     name: "BibeGallery",
-    image:
-      "/bibeblog.png", // You can add the image link here
+    image: "/bibeblog.png", // You can add the image link here
     description:
       "A full stack image store gallery with authenticaton and public and private image sharing with admin dash board ",
     techStack: [
@@ -56,48 +54,69 @@ const projectsData: ProjectData[] = [
       "React Hook Form",
       "TypeScript",
       "ImageKit",
-      "Pasport js"
+      "Pasport js",
     ],
     link: "https://bibegallery.netlify.app/",
-  }
-  ,
+  },
   {
     name: "BibeBlog",
     image: "/blog.png",
-    description: "A full-stack blogging platform enabling users to create, post, and manage blogs seamlessly. Features include secure authentication, rich-text blog creation, and a user-friendly dashboard.",
-    techStack: ["React.js", "Cloudflare Workers", "Hono", "PostgreSQL", "Prisma"],
-    link: "https://github.com/Bibek-only/BibeBlog",
+    description:
+      "A full-stack blogging platform enabling users to create, post, and manage blogs seamlessly. Features include secure authentication, rich-text blog creation, and a user-friendly dashboard.",
+    techStack: [
+      "React.js",
+      "Cloudflare Workers",
+      "Hono",
+      "PostgreSQL",
+      "Prisma",
+    ],
+    link: "https://bibeblog.netlify.app",
   },
   {
     name: "Paytm Wallet (PayVibe)",
     image: "/paytm.png",
-    description: "A digital wallet application allowing users to sign in and securely transfer money to other registered users. Includes user registration, secure money transfers, and payment history tracking.",
-    techStack: ["React", "Recoil", "React Router", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "Zod"],
+    description:
+      "A digital wallet application allowing users to sign in and securely transfer money to other registered users. Includes user registration, secure money transfers, and payment history tracking.",
+    techStack: [
+      "React",
+      "Recoil",
+      "React Router",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "JWT",
+      "Zod",
+    ],
     link: "https://github.com/Bibek-only/paytm",
   },
   {
     name: "Spotify Clone",
     image: "/spotify.png",
-    description: "A frontend clone of Spotify's user interface, recreating the design and layout using modern web technologies.",
+    description:
+      "A frontend clone of Spotify's user interface, recreating the design and layout using modern web technologies.",
     techStack: ["HTML", "CSS", "JavaScript"],
     link: "https://spotify-de2n.onrender.com/",
   },
   {
     name: "X-UI Clone",
-    image: "https://imgs.search.brave.com/YZ1SjLQxhbj0Pd5D19P6s61NQ7GMYKNHOnjLmt8DrdQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzA1/MzMvMjA4OS9maWxl/cy9wbGFjZWhvbGRl/ci1pbWFnZXMtaW1h/Z2VfbGFyZ2UucG5n/P3Y9MTUzMDEyOTA4/MQ",
-    description: "A frontend clone of the X-UI interface, replicating the user interface using modern web technologies.",
+    image:
+      "https://imgs.search.brave.com/YZ1SjLQxhbj0Pd5D19P6s61NQ7GMYKNHOnjLmt8DrdQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzA1/MzMvMjA4OS9maWxl/cy9wbGFjZWhvbGRl/ci1pbWFnZXMtaW1h/Z2VfbGFyZ2UucG5n/P3Y9MTUzMDEyOTA4/MQ",
+    description:
+      "A frontend clone of the X-UI interface, replicating the user interface using modern web technologies.",
     techStack: ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
     link: "https://github.com/Bibek-only/X-UI-clone",
   },
   {
     name: "Amazon UI Clone",
     image: "/amazon.png",
-    description: "A static frontend clone of Amazon's user interface, built with HTML and CSS to replicate the design and layout.",
+    description:
+      "A static frontend clone of Amazon's user interface, built with HTML and CSS to replicate the design and layout.",
     techStack: ["HTML", "CSS"],
     link: "https://github.com/Bibek-only/Amazon-ui-clone",
   },
 ];
-
 
 const Projects = () => {
   const sliderRef = useRef(null);
