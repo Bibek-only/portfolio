@@ -92,6 +92,23 @@ const projectsData: ProjectData[] = [
     link: "https://github.com/Bibek-only/paytm",
   },
   {
+  name: "BibeTodo",
+  image: "/bibetodo.png",
+  description:
+    "A full-stack Todo app with CRUD features, built using TypeScript. Hosted on Netlify and Render with PostgreSQL via Supabase. Developed in a Linux Ubuntu environment.",
+  techStack: [
+    "React",
+    "Redux",
+    "TypeScript",
+    "Tailwind CSS",
+    "Node.js",
+    "Express.js",
+    "PostgreSQL",
+    "Prisma",
+  ],
+  link: "https://bibetodo.netlify.app/",
+},
+  {
     name: "Spotify Clone",
     image: "/spotify.png",
     description:
@@ -102,7 +119,7 @@ const projectsData: ProjectData[] = [
   {
     name: "X-UI Clone",
     image:
-      "https://imgs.search.brave.com/YZ1SjLQxhbj0Pd5D19P6s61NQ7GMYKNHOnjLmt8DrdQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzA1/MzMvMjA4OS9maWxl/cy9wbGFjZWhvbGRl/ci1pbWFnZXMtaW1h/Z2VfbGFyZ2UucG5n/P3Y9MTUzMDEyOTA4/MQ",
+      "/x.png",
     description:
       "A frontend clone of the X-UI interface, replicating the user interface using modern web technologies.",
     techStack: ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
